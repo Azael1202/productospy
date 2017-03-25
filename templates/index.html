@@ -1,0 +1,12 @@
+$def with (posts)
+	<h1>Listado de Productos</h1>
+	$for post in posts:
+	<table class="table table-condensed">
+		<tbody>
+			<tr>
+				<td><a href="/about/$post.id_producto">$post.nombre</a></td>
+				<td><a href="/edit/$post.id_producto"><button class="btn btn-success">Editar</button></a></td>
+				<td><a href="/delete/$post.id_producto"><button class="btn btn-danger">Borrar</button></a></td>
+			</tr>
+		</tbody>
+	</table>
